@@ -1,0 +1,60 @@
+Rails Notes
+
+--break rails s: ctrl fn f12
+
+***Git***
+
+*Branches, Commits, & Merges*
+	git checkout -f 				[co current branch and overwrite current changes]
+	git checkout -b 'topic-brach' 	[creates and switches to new branch]
+	git status
+	git add . 						[adds additions & changes of all files to staging]
+	git commit -a -m 				[update changes to existing files, skip staging]
+	git checkout master				[move to master branch]
+	git merge topic-branch			[merge topic-branch into master branch]
+	git branch -d topic-branch		[delete topic-branch, iff changes have been merged]
+	git branch -D topic-branch		[delete topic-branch]
+
+*Pushes*
+	git push 						[pushes master branch to remote repo]
+
+
+***Ruby***
+
+*Strings*
+	string interpolation			"#{first_name} #{last_name}" --> "Venkat Rao"
+	string concat					"cat" + "dog" --> "catdog"
+	single quote -- literal print	'\n' --> "\n"
+	puts							puts "blah" --> prints to screen + newline
+	prints							print "blah" --> prints to screen w/o newline
+	.empty?							"".empty? = true    "word".empty? = false
+	.to_s							3.to_s = "3"   nil.to_s = ""
+
+*Arrays*
+	indicies can be negative (wrap around)
+	.first .second .last 			returns given element in the array
+	.push 							add element
+	.split(x)						split string into array based on x
+	.join(x)						joins array elements into a string with x as separator
+	.sort							DOES NOT MUTATE ARRAY
+	.reverse						DOES NOT MUTATE ARRAY
+	.shuffle						DOES NOT MUTATE ARRAY
+	.sort!							MUTATES ARRAY
+	.reverse!						MUTATES ARRAY
+	.shuffle!						MUTATES ARRAY
+	%w  							shortcut for string array ---> %w[foo bar baz]
+	a[0..4]							return array from given range inclusive
+
+*Blocks*
+	--Print 2X each number in a range--
+	(1..5).each do |number|
+	  puts 2 * number
+	  puts '--'
+	end
+
+	
+
+
+
+
+	
